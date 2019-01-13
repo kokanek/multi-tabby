@@ -1,0 +1,40 @@
+{
+ "manifest_version": 2,
+ "name": "CustomTaber",
+ "description": "Open pre-configured tabs of your choice on key combinations.",
+ "version": "1",
+ "author": "Kapeel Kokane",
+"browser_action": {
+   "default_icon": "tab-icon.png",
+   "default_title": "Have a good day",
+   "default_popup": "popup.html"
+ },
+"background":{
+  "scripts": ["background.js"]
+},
+"commands": {
+  "open-set-pages": {
+    "suggested_key": {
+      "default": "Ctrl+Shift+K",
+      "mac": "Command+Shift+K"
+    },
+    "description": "Open a set of pages"
+  },
+  "_execute_browser_action": {
+    "suggested_key": {
+      "windows": "Ctrl+Shift+Y",
+      "mac": "Command+Shift+Y",
+      "chromeos": "Ctrl+Shift+U",
+      "linux": "Ctrl+Shift+J"
+    }
+  },
+  "_execute_page_action": {
+    "suggested_key": {
+      "default": "Ctrl+Shift+E",
+      "windows": "Alt+Shift+P",
+      "mac": "Alt+Shift+P"
+    }
+  }
+},
+ "permissions": ["activeTab", "tabs"]
+}
